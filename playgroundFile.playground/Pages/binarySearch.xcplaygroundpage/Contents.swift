@@ -39,4 +39,11 @@ func binarySearchForSearchValue(searchValue: Int, array: [Int]) -> Bool {
 
 print(binarySearchForSearchValue(searchValue: 12, array: hundreds))
 
+/*
+ 50
+ 25
+ 12
+ true
+ */
+
 
