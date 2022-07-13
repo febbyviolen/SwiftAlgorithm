@@ -14,17 +14,20 @@ for i in 1...100 {
     hundreds.append(i)
 }
 
-func binarySearchForSearchValue(searchValue: Int, array: [Int]) -> Bool {
+func binarySearchForSearchValue(searchValue: Int, array: [Int]) -> Int? {
+    guard !array.isEmpty else {
+        return nil
+    }
+    
     var leftIndex = 0
     var rightIndex = array.count - 1
+    
     while leftIndex <= rightIndex {
         let middleIndex = (leftIndex + rightIndex) / 2
         let middleValue = array[middleIndex]
         
-        print("\(middleValue)")
-        
         if middleValue == searchValue {
-            return true
+            return middleIndex
         }
         if searchValue < middleValue {
             rightIndex = middleIndex - 1
@@ -33,17 +36,9 @@ func binarySearchForSearchValue(searchValue: Int, array: [Int]) -> Bool {
             leftIndex = middleIndex + 1
         }
     }
-    
-    return false
+
+    return nil
 }
 
-print(binarySearchForSearchValue(searchValue: 12, array: hundreds))
-
-/*
- 50
- 25
- 12
- true
- */
-
-
+print(binarySearchForSearchValue(searchValue: 12, array: hundreds) ?? -1)
+//11
