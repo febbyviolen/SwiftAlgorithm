@@ -5,5 +5,6 @@
         <page name='buzzFizz'/>
         <page name='factorialAndRecursion'/>
         <page name='MostCommonNameInArray'/>
+        <page name='ReverseEveryOtherWord'/>
     </pages>
 </playground>
